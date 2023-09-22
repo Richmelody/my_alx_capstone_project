@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -10,7 +10,7 @@
   #projects {
     height: fit-content;
   }
-}
+} */
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   #contact,
   footer {
     height: 40vh;
@@ -100,4 +100,4 @@
   .text-container {
     text-align: justify;
   }
-}
+} */
