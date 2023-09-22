@@ -19,3 +19,31 @@ html {
 p {
   color: rgb 85, 85, 85;
 }
+
+/* transition */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* desktop Nav */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
