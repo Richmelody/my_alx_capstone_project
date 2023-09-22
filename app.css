@@ -100,8 +100,7 @@ text-decoration-color: rgb 181, 181, 181;
   position: absolute;
   top: 100%;
   right: 0;
-  width: 100%;
-  background-color: #fff;
+  background-color: white;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -128,20 +127,24 @@ text-decoration-color: rgb 181, 181, 181;
 
 .hamburger-icon.open span:first-child{
   transform: rotate(45deg);
-  translate: 10px, 5px;
+  translate(10px, 5px);
 }
 .hamburger-icon.open span:nth-child(2){
   opacity: 0;
 }
 .hamburger-icon.open span:last-child{
   transform: rotate(-45deg);
-  translate: 10px, -5px;
+  translate(10px, -5px);
 }
 
 .hamburger-icon span:first-child{
   transform: none;
 }
 
-.hamburger-icon.open span:first-child{
+.hamburger-icon span:first-child{
   opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+  transform: none;
 }
