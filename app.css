@@ -89,7 +89,7 @@ text-decoration-color: rgb 181, 181, 181;
   cursor: pointer;
 }
 
-.hamburger-icon span{
+.hamburger-icon span {
   width: 100%;
   height: 2px;
   background-color: black;
@@ -109,42 +109,48 @@ text-decoration-color: rgb 181, 181, 181;
 
 .menu-links a {
   display: block;
-  padding:10px;
+  padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color:black
+  color: black;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
- .menu-links li{
+.menu-links li {
   list-style: none;
- }
+}
 
- .menu-links.open{
+.menu-links.open {
   max-height: 300px;
- }
-
-.hamburger-icon.open span:first-child{
-  transform: rotate(45deg);
-  translate(10px, 5px);
-}
-.hamburger-icon.open span:nth-child(2){
-  opacity: 0;
-}
-.hamburger-icon.open span:last-child{
-  transform: rotate(-45deg);
-  translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child{
+
+/* Add a border underneath each menu link on hover when the menu is open */
+.menu-links.open a:hover {
+  border-bottom: 1px solid black; /* Change the color to your preferred one */
+}
+
+/* Styles for closed hamburger icon */
+.hamburger-icon:not(.open) span:first-child {
   transform: none;
 }
 
-.hamburger-icon span:first-child{
+.hamburger-icon:not(.open) span:first-child {
   opacity: 1;
 }
 
-.hamburger-icon span:first-child{
-  transform: none;
+/* Styles for open hamburger icon */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
 }
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* section */
