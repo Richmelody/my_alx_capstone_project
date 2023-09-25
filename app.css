@@ -154,3 +154,22 @@ text-decoration-color: rgb 181, 181, 181;
 }
 
 /* section */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0.10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+#section-container {
+  display: flex;
+}
+
+/* profile section */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
