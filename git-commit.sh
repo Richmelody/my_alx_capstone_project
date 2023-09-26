@@ -3,7 +3,7 @@
 # Check if there are any changes to commit
 if [[ $(git status --porcelain) ]]; then
 	    # Prompt for a commit message
-	        echo "Enter a commit message:"
+	      echo "Enter a commit message:"
 		    read commit_message
 	    else
 		        # No changes to commit, so skip the commit message prompt
