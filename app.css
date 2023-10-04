@@ -33,13 +33,6 @@ nav,
   display: flex;
 }
 
-/* nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 15vh;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-} */
-/* */
 nav {
   position: sticky;
   top: 0;
@@ -71,13 +64,45 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+/* Style the .logo class */
 .logo {
   font-size: 2rem;
+  text-decoration: none; /* Remove text decoration for the .logo class */
+  color: inherit; /* Inherit the color from the parent element */
+  position: relative; /* Add this line to enable positioning of the pseudo-element */
 }
 
-.logo:hover {
-  cursor: default;
+/* Style the rectangular background when hovering over the logo */
+.logo a::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Width 100% to match the parent width */
+  height: 100%; /* Height 100% to match the parent height */
+  background-color: rgb(231, 231, 231); /* Grayish color */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.2s ease-in-out; /* Add a transition for smooth appearance */
+  z-index: -1; /* Place it behind the text */
+  border-radius: 5px; /* Rounded edges */
 }
+
+/* Style the rectangular background when hovering over the logo */
+.logo a:hover::before {
+  opacity: 0.7; /* Make it visible on hover */
+}
+
+
+/* Style the logo's link separately */
+.logo a {
+  text-decoration: none; /* Remove text decoration for the logo link */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
+.logo a:hover {
+  cursor:pointer;
+}
+
 
 /* HAMBURGER MENU */
 
@@ -108,17 +133,19 @@ a:hover {
 
 .menu-links {
   background-color: white;
+  border-radius: 1rem;
   position: absolute;
   top: 80px;
   right: 0;
   min-width: 320px;
   padding-right: 20px;
   padding-left: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px rgba(15, 15, 15, 0.2);
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
 }
+
 
 .menu-links a {
   display: block;
@@ -129,7 +156,16 @@ a:hover {
   text-decoration: none;
   transition: all 0.3 ease-in-out;
   background-color: transparent;
+  
 }
+
+.menu-links a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(0, 0, 0);
+}
+
 
 .menu-links li {
   list-style: none;
@@ -168,12 +204,13 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding-top: 15vh; /* Add padding to account for the sticky navigation */
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
+
 
 .section-container {
   display: flex;
@@ -377,6 +414,7 @@ article .icon {
 
 #projects {
   position: relative;
+  padding-top: 10vh; /* Add padding to account for the sticky navigation */
 }
 
 .color-container {
@@ -403,6 +441,7 @@ article .icon {
 /* CONTACT */
 
 #contact {
+  padding-top: 17vh; /* Add padding to account for the sticky navigation */
   display: flex;
   justify-content: center;
   flex-direction: column;
