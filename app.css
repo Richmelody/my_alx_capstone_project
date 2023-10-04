@@ -223,6 +223,8 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  padding-top: 27vh; /* Add padding to account for the sticky navigation */
+
 }
 
 .section__pic-container {
