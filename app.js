@@ -39,7 +39,7 @@ function isDesktop() {
 
 // Attach the scroll event listener conditionally for desktop screens
 if (isDesktop()) {
-  window.addEventListener("scroll", toggleMenu);
+  // window.addEventListener("scroll", toggleMenu);
   window.addEventListener("scroll", handleScrollToTopButton);
 }
 
