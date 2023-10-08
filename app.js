@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
   const nav = document.getElementById("desktop-nav");
 
   // Check the scroll position and adjust the height accordingly
-  if (window.scrollY > 0) {
+  if (window.scrollY > 50) {
     nav.style.height = "10vh"; // Adjust this value as needed
   } else {
     nav.style.height = "17vh"; // Original height
@@ -31,7 +31,7 @@ function scrollToTop() {
 // Handle scroll to top button visibility
 window.addEventListener("scroll", function () {
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  if (window.scrollY > 100) {
+  if (window.scrollY > 650) {
     scrollToTopBtn.style.display = "block";
   } else {
     scrollToTopBtn.style.display = "none";
@@ -44,10 +44,10 @@ window.addEventListener("scroll", function () {
 // }
 
 // Attach the scroll event listener conditionally for desktop screens
-if (isDesktop()) {
-  // window.addEventListener("scroll", toggleMenu);
-  window.addEventListener("scroll", handleScrollToTopButton);
-}
+// if (isDesktop()) {
+//   // window.addEventListener("scroll", toggleMenu);
+//   window.addEventListener("scroll", handleScrollToTopButton);
+// }
 
 // // Function to handle the mobile menu toggle
 // function toggleMenu() {
@@ -88,3 +88,25 @@ if (isDesktop()) {
 // // if (isDesktop()) {
 // //   window.addEventListener("scroll", handleScrollToTopButton);
 // // }
+
+
+const logoLink = document.getElementById(".logo-link");
+let initialScrollPosition = 0;
+
+// Store the initial scroll position when the page loads
+window.addEventListener("load", function () {
+  initialScrollPosition = window.scrollY;
+});
+
+// Add a click event listener to the logo link
+logoLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default link behavior
+
+  // Scroll back to the initial position with a smooth animation
+  window.scrollTo({
+    top: initialScrollPosition,
+    behavior: "smooth",
+  });
+});
+
+

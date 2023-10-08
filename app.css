@@ -204,7 +204,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 15vh; /* Add padding to account for the sticky navigation */
+  padding-top: 17vh; /* Add padding to account for the sticky navigation */
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -223,7 +223,8 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  padding-top: 27vh; /* Add padding to account for the sticky navigation */
+  padding-top: none; /* Add padding to account for the sticky navigation */
+  scroll-snap-align: start;
 
 }
 
@@ -324,6 +325,8 @@ section {
 
 #about {
   position: relative;
+  scroll-snap-align: start;
+
 }
 
 .about-containers {
@@ -377,6 +380,8 @@ section {
 
 #experience {
   position: relative;
+  scroll-snap-align: start;
+
 }
 
 .experience-sub-title {
@@ -416,7 +421,9 @@ article .icon {
 
 #projects {
   position: relative;
-  padding-top: 10vh; /* Add padding to account for the sticky navigation */
+  padding-top: 15vh; /* Add padding to account for the sticky navigation */
+  scroll-snap-align: start;
+
 }
 
 .color-container {
@@ -448,6 +455,8 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  scroll-snap-align: start;
+
 }
 
 .contact-info-upper-container {
@@ -456,7 +465,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -485,6 +494,8 @@ s .email-icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  scroll-snap-align: start;
+
 }
 
 footer p {
