@@ -11,8 +11,12 @@
   <body>
     <nav id="desktop-nav">
       <div class="logo">
-        <a href="#profile" id="logo-link">Ikuru Chigozie Richards</a>
+        <a href="#profile" id="logo-link">
+          <img src="my-assets/logo-nav.png" alt="Logo" class="logo-image" />
+          Ikuru Chigozie Richards
+        </a>
       </div>
+      
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -23,7 +27,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Ikuru Chigozie Richards</div>
+      
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -38,6 +42,7 @@
         </div>
       </div>
     </nav>
+    
     <section id="profile">
       <div class="section__pic-container">
         <img
@@ -49,7 +54,7 @@
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Ikuru Chigozie Richards</h1>
         <p class="section__text__p2">
-          Educational psychologist and Software Engineer
+          Educational Psychologist and Software Engineer specializing in Instructional Design and Development
         </p>
         <div class="btn-container">
           <button
@@ -266,89 +271,75 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
+      
       <div class="experience-details-container">
         <div class="about-containers">
+          <!-- Educational Psychology Section -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./my-assets/project-1.png"
-                alt="Project 1"
+                src="./my-assets/educational-psychology.png"
+                alt="Educational Psychology Projects"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Educational Psychology</h2>
+            <p>Explore projects focused on personalized learning plans, student counseling, and mentoring to unlock individual potential. These projects combine psychology with innovative learning strategies.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="window.open('./educational-psychology.html', '_blank')"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
+                Explore
               </button>
             </div>
           </div>
+    
+          <!-- Software Engineering Section -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./my-assets/project-2.png"
-                alt="Project 2"
+                src="./my-assets/software-engineering.png"
+                alt="Software Engineering Projects"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Software Engineering</h2>
+            <p>Dive into front-end development projects where functionality meets aesthetics. These include web applications built with modern frameworks, showcasing innovative design and user experience.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="window.open('./software-engineering.html', '_blank')"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
+                Explore
               </button>
             </div>
           </div>
+    
+          <!-- Instructional Design Section -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./my-assets/project-3.png"
-                alt="Project 3"
+                src="./my-assets/instructional-design.png"
+                alt="Instructional Design Projects"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Instructional Design</h2>
+            <p>Discover engaging e-learning modules crafted using principles of educational psychology and instructional technology. These projects include interactive courses and gamified learning experiences.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="window.open('./instructional-design.html', '_blank')"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
+                Explore
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- <img
-        src="./my-assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      /> -->
     </section>
+      
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>

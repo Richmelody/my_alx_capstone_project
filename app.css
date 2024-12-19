@@ -58,50 +58,59 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: #0fb4b4;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgb(0, 0, 0);
 }
 
-/* Style the .logo class */
+/* General style for the .logo container */
 .logo {
-  font-size: 2rem;
-  text-decoration: none; /* Remove text decoration for the .logo class */
-  color: inherit; /* Inherit the color from the parent element */
-  position: relative; /* Add this line to enable positioning of the pseudo-element */
+  display: inline-block; /* Keeps the logo inline */
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
 }
 
-/* Style the rectangular background when hovering over the logo */
-.logo a::before {
-  content: ''; /* Create a pseudo-element */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Width 100% to match the parent width */
-  height: 100%; /* Height 100% to match the parent height */
-  background-color: rgb(231, 231, 231); /* Grayish color */
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.2s ease-in-out; /* Add a transition for smooth appearance */
-  z-index: -1; /* Place it behind the text */
-  border-radius: 5px; /* Rounded edges */
-}
-
-/* Style the rectangular background when hovering over the logo */
-.logo a:hover::before {
-  opacity: 0.7; /* Make it visible on hover */
-}
-
-
-/* Style the logo's link separately */
+/* Style the link */
 .logo a {
-  text-decoration: none; /* Remove text decoration for the logo link */
-  color: inherit; /* Inherit the color from the parent element */
+  display: flex; /* Aligns logo image and text horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 9px; /* Adds spacing between the logo image and text */
+  text-decoration: none;
+  color: inherit;
+  position: relative; /* Keeps the hover background effect in place */
+ 
+  border-radius: 5px; /* Match the hover background’s rounded edges */
+  z-index: 1; /* Ensures the link stays on top */
+  transition: transform 0.2s ease-in-out; /* Smooth zoom-out transition */
 }
 
-.logo a:hover {
-  cursor:pointer;
+/* Logo image styles */
+.logo-image {
+  width: 76px; /* Adjust size of the logo image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.2s ease-in-out; /* Smooth zoom-out transition */
 }
+
+/* Background rectangle effect on hover */
+
+
+/* Add zoom-out effect on hover (text and image) */
+.logo a:hover {
+  transform: scale(1.03); /* Zoom out effect for the link */
+}
+
+.logo a:hover .logo-image {
+  transform: scale(1.03); /* Zoom out effect for the image */
+}
+
+/* Optional: Add pointer cursor on hover */
+.logo a:hover {
+  cursor: pointer;
+}
+
 
 
 /* HAMBURGER MENU */
@@ -130,6 +139,8 @@ a:hover {
   background-color: black;
   transition: all 0.3 ease-in-out;
 }
+
+
 
 .menu-links {
   background-color: white;
@@ -160,7 +171,7 @@ a:hover {
 }
 
 .menu-links a:hover {
-  color: grey;
+  color: #0fb4b4;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(0, 0, 0);
@@ -230,8 +241,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   margin: auto 0;
 }
 
@@ -421,7 +432,7 @@ article .icon {
 
 #projects {
   position: relative;
-  padding-top: 15vh; /* Add padding to account for the sticky navigation */
+  padding-top: 11vh; /* Add padding to account for the sticky navigation */
   scroll-snap-align: start;
 
 }
@@ -445,6 +456,7 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  margin-top: 20px;
 }
 
 /* CONTACT */
